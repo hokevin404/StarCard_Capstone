@@ -6,7 +6,7 @@ const AuthContext = createContext(
 
 );
 
-export function UserProvider({children}) {
+export function UserProvider({ children }) {
     // Create cookies
     const [cookies, setCookies, removeCookies] = useCookies();
 
