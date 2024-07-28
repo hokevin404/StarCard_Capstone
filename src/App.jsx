@@ -18,7 +18,8 @@ function App() {
         <Route element={<Shop />} />
 
         {/* Protected Routes */}
-        <Route element={<ProtectedRoutes />} />
+        <Route element={<ProtectedRoutes />}>
+        </Route>
       </Routes>
 
     </>
