@@ -30,7 +30,15 @@ export function UserProvider({ children }) {
     // SignUp Function
     const signUp = async (formData) => {
         try {
-            
+            // Make call to backend
+            let res = await axios({
+                method: 'POST',
+                url: 'http://127.0.0.1:3000/api/users/signup',
+                data: formData
+            })
+
+            // Set token to cookies
+            setCookies('token', res.data.token);
         } catch (error) {
             console.error(error)
         }
