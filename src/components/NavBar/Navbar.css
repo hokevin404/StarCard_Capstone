@@ -24,18 +24,13 @@
   .spacer {
     flex: 1; /* Grow and fill available space */
   }
-  
-  .signup {
-    margin-left: 10px; /* Optional: Adjust margin between Log In and Sign Up */
-  }
-  
-  .signup a {
+  .login a {
     padding: 8px 16px; /* Optional: Adjust padding for Sign Up button */
     background-color: #007bff; /* Optional: Button background color */
     color: #fff; /* Optional: Button text color */
     text-decoration: none;
   }
   
-  .signup a:hover {
+.login a:hover {
     background-color: #0056b3; /* Optional: Hover state background color */
   }

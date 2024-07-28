@@ -15,8 +15,7 @@ function NavBar() {
                 </Link>
             </li>
             <li className="spacer"></li>
-            <li className="signup"><Link to={'/auth'}>Sign Up</Link></li>
-            <li><Link to={'/auth'}>Log In</Link></li>
+            <li className='login'><Link to={'/login'}>Log In</Link></li>
         </ul>
     )
 }
