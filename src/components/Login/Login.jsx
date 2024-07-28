@@ -18,6 +18,12 @@ function Login({ setNewUser }) {
         });
     };
 
+    async function handleSubmit(e) {
+        e.preventDefault();
+        await Login(formData);
+        nav('/dashboard')
+    }
+
     // Function to dictate click action
     function handleClick() {
         setNewUser(true);
@@ -44,7 +50,7 @@ function Login({ setNewUser }) {
                     minLength="8"
                     onChange={handleChange}
                 />
-                <button type="submit" onClick={handleClick}>Log In</button>
+                <button type="submit">Log In</button>
             </form>
 
             <p>

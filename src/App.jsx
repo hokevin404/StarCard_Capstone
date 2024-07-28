@@ -6,6 +6,7 @@ import Banner from './components/Banner/Banner.jsx';
 import Shop from './components/Shop/Shop.jsx';
 import Auth from './components/pages/Auth/Auth.jsx';
 import ProtectedRoutes from './components/protectedRoutes/ProtectedRoutes.jsx';
+import Dashboard from './components/pages/Dashboard/Dashboard.jsx';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
         {/* Protected Routes */}
         <Route element={<ProtectedRoutes />}>
+          <Route path='/dashboard' element={<Dashboard />} />
         </Route>
       </Routes>
 

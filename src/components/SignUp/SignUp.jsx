@@ -25,7 +25,7 @@ function SignUp({setNewUser}) {
         />
         <label htmlFor="email">Email Name: </label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="email name"
@@ -39,7 +39,7 @@ function SignUp({setNewUser}) {
         />
         <label htmlFor="password">Password: </label>
         <input
-          type="text"
+          type="password"
           id="password"
           name="password"
           placeholder="password"
@@ -47,7 +47,7 @@ function SignUp({setNewUser}) {
         />
         <label htmlFor="password2">Confirm Password: </label>
         <input
-          type="text"
+          type="password"
           id="password2"
           name="password2"
           placeholder="confirm password" 
