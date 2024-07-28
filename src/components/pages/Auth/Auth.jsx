@@ -6,7 +6,7 @@ import Login from '../../Login/Login';
 import React, { useState } from 'react'
 
 function Auth() {
-    const [newUser, setNewUser] = useState(true);
+    const [newUser, setNewUser] = useState(false);
 
   return (
     <>
