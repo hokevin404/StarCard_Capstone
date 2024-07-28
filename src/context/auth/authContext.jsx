@@ -11,7 +11,7 @@ export function UserProvider({ children }) {
     const [cookies, setCookies, removeCookie] = useCookies();
 
     // Login Function
-    const login = async (formData) => {
+    async function login(formData) {
         try {
             // Make call to backend
             let res = await axios({
@@ -28,7 +28,7 @@ export function UserProvider({ children }) {
     }
 
     // SignUp Function
-    const signUp = async (formData) => {
+    async function signUp(formData) {
         try {
             // Make call to backend
             let res = await axios({
@@ -45,7 +45,7 @@ export function UserProvider({ children }) {
     };
 
     // Logout function
-    const logout = () => {
+    function logout() {
         // remove all tokens from cookie
         ['token'].forEach((obj) => removeCookie(obj));
     }
