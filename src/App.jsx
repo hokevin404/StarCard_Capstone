@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Banner from './components/Banner/Banner.jsx';
 import Shop from './components/Shop/Shop.jsx';
+import Auth from './components/pages/Auth/Auth.jsx';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <NavBar />
       <Routes>
+        <Route path='/auth' element={<Auth />} />
         <Route element={<Banner />} />
         <Route element={<Shop />} />
       </Routes>
