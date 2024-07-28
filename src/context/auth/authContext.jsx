@@ -8,7 +8,7 @@ const AuthContext = createContext(
 
 export function UserProvider({ children }) {
     // Create cookies
-    const [cookies, setCookies, removeCookies] = useCookies();
+    const [cookies, setCookies, removeCookie] = useCookies();
 
     // Login Function
     const login = async (formData) => {
@@ -42,6 +42,10 @@ export function UserProvider({ children }) {
         } catch (error) {
             console.error(error)
         }
+    };
+
+    const logout = () => {
+        ['token'].forEach((obj) => removeCookie(obj));
     }
 
     return <AuthContext.Provider>{children}</AuthContext.Provider>
