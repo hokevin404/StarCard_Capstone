@@ -60,3 +60,8 @@ export function UserProvider({ children }) {
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 };
+
+// Function export to return all values of Auth useContext
+export function useAuth() {
+    return useContext(AuthContext);
+};
