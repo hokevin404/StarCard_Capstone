@@ -32,7 +32,7 @@ function Login({ setNewUser }) {
     return (
         <div className="loginContainer">
             <h3>Log In</h3>
-            <form autoComplete="off">
+            <form onSubmit={handleSubmit} autoComplete="off">
                 <label htmlFor="username">Username: </label>
                 <input
                     type="text"
