@@ -1,6 +1,9 @@
 // import NavBar css
 import './navbar.css';
 
+// import modules
+import { Link } from 'react-router-dom';
+
 import React from "react";
 
 function NavBar() {
@@ -8,8 +11,8 @@ function NavBar() {
         <ul className="navbar">
             <li className="logo"><img src="src/assets/horizontal_logo-removebg.png" alt="Logo" /></li>
             <li className="spacer"></li>
-            <li className="signup"><a href="#">Sign Up</a></li>
-            <li><a href="#">Log In</a></li>
+            <li className="signup"><Link to={'/auth'}>Sign Up</Link></li>
+            <li><Link to={'/auth'}>Log In</Link></li>
         </ul>
     )
 }
