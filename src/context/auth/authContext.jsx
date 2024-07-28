@@ -20,7 +20,8 @@ export function UserProvider({children}) {
                 data: formData
             })
 
-
+            // Set token to cookies
+            setCookies('token', res.data.token);
         } catch (error) {
             console.error(error)
         }
