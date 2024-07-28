@@ -22,6 +22,10 @@ function SignUp({setNewUser}) {
     });
   };
 
+  function handleSubmit() {
+    e.preventDefault();
+  };
+
   function handleClick() {
     setNewUser(false);
   }
