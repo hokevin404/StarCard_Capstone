@@ -1,3 +1,5 @@
+import './signup.css';
+
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -44,6 +46,7 @@ function SignUp({setNewUser}) {
     <div className="signupContainer">
       <h3>Sign Up</h3>
       <form onSubmit={handleSubmit} autoComplete="off">
+      <div className="form-group">
         <label htmlFor="First Name">First Name: </label>
         <input
           type="text"
@@ -52,6 +55,8 @@ function SignUp({setNewUser}) {
           placeholder="first name"
           onChange={handleChange}
         />
+        </div>
+        <div className="form-group">
         <label htmlFor="Last Name">Last Name: </label>
         <input
           type="text"
@@ -60,6 +65,8 @@ function SignUp({setNewUser}) {
           placeholder="last name"
           onChange={handleChange}
         />
+        </div>
+        <div className="form-group">
         <label htmlFor="email">Email Name: </label>
         <input
           type="email"
@@ -68,6 +75,8 @@ function SignUp({setNewUser}) {
           placeholder="email name"
           onChange={handleChange}
         />
+        </div>
+        <div className="form-group">
         <label htmlFor="username">Username: </label>
         <input
           type="text"
@@ -76,6 +85,8 @@ function SignUp({setNewUser}) {
           placeholder="username"
           onChange={handleChange}
         />
+        </div>
+        <div className="form-group">
         <label htmlFor="password">Password: </label>
         <input
           type="password"
@@ -85,6 +96,8 @@ function SignUp({setNewUser}) {
           minLength="8"
           onChange={handleChange}
         />
+        </div>
+        <div className="form-group">
         <label htmlFor="password2">Confirm Password: </label>
         <input
           type="password"
@@ -94,12 +107,13 @@ function SignUp({setNewUser}) {
           minLength="8"
           onChange={handleChange}
         />
-        <button type="submit">Sign Up</button>
+        </div>
+        <button className='signUpBtn' type="submit">Sign Up</button>
       </form>
 
       <p>
         Already have an account? 
-        <button type="submit" onClick={handleClick}>Log In</button>
+        <button className='loginBtn' type="submit" onClick={handleClick}>Log In</button>
       </p>
     </div>
   )

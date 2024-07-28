@@ -6,6 +6,8 @@ import Shop from './components/Shop/Shop.jsx';
 import Auth from './components/pages/Auth/Auth.jsx';
 import ProtectedRoutes from './components/protectedRoutes/ProtectedRoutes.jsx';
 import Dashboard from './components/pages/Dashboard/Dashboard.jsx';
+import Profile from './components/pages/Profile/Profile.jsx';
+
 function App() {
 
   return (
