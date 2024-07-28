@@ -22,8 +22,18 @@ function SignUp({setNewUser}) {
     });
   };
 
-  function handleSubmit() {
+  async function handleSubmit(e) {
     e.preventDefault();
+    try {
+      if(formData.password !== formData.password2)
+        throw "Password does not match"
+      else {
+        await signUp(formData);
+        nav('/dashboard'); 
+      };
+    } catch (error) {
+      console.error(error);
+    };
   };
 
   function handleClick() {
@@ -33,7 +43,7 @@ function SignUp({setNewUser}) {
   return (
     <div className="signupContainer">
       <h3>Sign Up</h3>
-      <form autoComplete="off">
+      <form onSubmit={handleSubmit} autoComplete="off">
         <label htmlFor="First Name">First Name: </label>
         <input
           type="text"
