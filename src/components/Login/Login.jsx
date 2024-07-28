@@ -1,6 +1,24 @@
-import React from "react"
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/auth/authContext";
 
 function Login({ setNewUser }) {
+    const nav = useNavigate();
+    const { Login } = useAuth();
+    const [ formData, setFormData] = useState({
+        username: '',
+        password: ''
+    });
+
+    // Function to dictate detected changes
+    function handleChange(e) {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    // Function to dictate click action
     function handleClick() {
         setNewUser(true);
     }
@@ -15,6 +33,7 @@ function Login({ setNewUser }) {
                     id="username"
                     name="username"
                     placeholder="username"
+                    onChange={handleChange}
                 />
                 <label htmlFor="password">Password: </label>
                 <input
@@ -23,6 +42,7 @@ function Login({ setNewUser }) {
                     name="password"
                     placeholder="password"
                     minLength="8"
+                    onChange={handleChange}
                 />
                 <button type="submit" onClick={handleClick}>Log In</button>
             </form>
