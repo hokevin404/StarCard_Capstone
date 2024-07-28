@@ -1,20 +1,20 @@
 // import components
-import Register from '../../SignUp/SignUp';
+import SignUp from '../../SignUp/SignUp';
 import Login from '../../Login/Login';
 
 // import modules
 import React, { useState } from 'react'
 
 function Auth() {
-    const [newUser, setNewUser] = useState(false);
+    const [newUser, setNewUser] = useState(true);
 
   return (
     <>
       {newUser ? (
-        <Register setNewUser={setNewUser} />
+        <SignUp setNewUser={setNewUser} />
       ) : (
         <Login setNewUser={setNewUser} />
-      )};
+      )}
     </>
   );
 };
