@@ -1,5 +1,5 @@
 // import components
-import Register from '../../Register/Register';
+import Register from '../../SignUp/SignUp';
 import Login from '../../Login/Login';
 
 // import modules

@@ -1,7 +1,7 @@
 
-function Register() {
+function SignUp() {
   return (
-    <div>
+    <div className="signupContainer">
         
     </div>
   )
