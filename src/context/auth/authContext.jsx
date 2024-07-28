@@ -7,7 +7,8 @@ const AuthContext = createContext(
 );
 
 export function UserProvider({children}) {
-    
+    // Create cookies
+    const [cookies, setCookies, removeCookies] = useCookies();
 
     return <AuthContext.Provider>{children}</AuthContext.Provider>
 };
