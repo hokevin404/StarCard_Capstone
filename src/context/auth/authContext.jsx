@@ -44,9 +44,13 @@ export function UserProvider({ children }) {
         }
     };
 
+    // Logout function
     const logout = () => {
+        // remove all tokens from cookie
         ['token'].forEach((obj) => removeCookie(obj));
     }
+
+
 
     return <AuthContext.Provider>{children}</AuthContext.Provider>
 };
