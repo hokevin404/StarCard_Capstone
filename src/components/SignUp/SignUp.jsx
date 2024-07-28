@@ -1,6 +1,10 @@
 import React from "react";
 
-function SignUp() {
+function SignUp({setNewUser}) {
+  function handleClick() {
+    setNewUser(false);
+  }
+
   return (
     <div className="signupContainer">
       <h3>Sign Up</h3>
@@ -49,8 +53,13 @@ function SignUp() {
           placeholder="confirm password" 
           minLength="8"
         />
-          <button type="submit">Sign Up</button>
+        <button type="submit">Sign Up</button>
       </form>
+
+      <p>
+        Already have an account? 
+        <button type="submit" onClick={handleClick}>Log In</button>
+      </p>
     </div>
   )
 }
