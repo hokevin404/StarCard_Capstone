@@ -1,6 +1,19 @@
 import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/auth/authContext";
 
 function SignUp({setNewUser}) {
+  const nav = useNavigate();
+  const { signUp } = useAuth();
+  const [formData, setFormData] = useState({
+    fname: '',
+    lname: '',
+    email: '',
+    username: '',
+    password: '',
+  })
+
   function handleClick() {
     setNewUser(false);
   }
