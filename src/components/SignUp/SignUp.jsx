@@ -12,7 +12,15 @@ function SignUp({setNewUser}) {
     email: '',
     username: '',
     password: '',
-  })
+    password2: ''
+  });
+
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   function handleClick() {
     setNewUser(false);
@@ -28,6 +36,7 @@ function SignUp({setNewUser}) {
           id="fname"
           name="fname"
           placeholder="first name"
+          onChange={handleChange}
         />
         <label htmlFor="Last Name">Last Name: </label>
         <input
@@ -35,6 +44,7 @@ function SignUp({setNewUser}) {
           id="lname"
           name="lname"
           placeholder="last name"
+          onChange={handleChange}
         />
         <label htmlFor="email">Email Name: </label>
         <input
@@ -42,6 +52,7 @@ function SignUp({setNewUser}) {
           id="email"
           name="email"
           placeholder="email name"
+          onChange={handleChange}
         />
         <label htmlFor="username">Username: </label>
         <input
@@ -49,6 +60,7 @@ function SignUp({setNewUser}) {
           id="username"
           name="username"
           placeholder="username"
+          onChange={handleChange}
         />
         <label htmlFor="password">Password: </label>
         <input
@@ -57,6 +69,7 @@ function SignUp({setNewUser}) {
           name="password"
           placeholder="password"
           minLength="8"
+          onChange={handleChange}
         />
         <label htmlFor="password2">Confirm Password: </label>
         <input
@@ -65,6 +78,7 @@ function SignUp({setNewUser}) {
           name="password2"
           placeholder="confirm password" 
           minLength="8"
+          onChange={handleChange}
         />
         <button type="submit">Sign Up</button>
       </form>
