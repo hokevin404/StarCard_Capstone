@@ -50,7 +50,13 @@ export function UserProvider({ children }) {
         ['token'].forEach((obj) => removeCookie(obj));
     }
 
+    // Re-render functions if any changes are detected
+    const value = useMemo(() => ({
+        cookies,
+        login,
+        signUp,
+        logout
+    }), [cookies]);
 
-
-    return <AuthContext.Provider>{children}</AuthContext.Provider>
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 };
