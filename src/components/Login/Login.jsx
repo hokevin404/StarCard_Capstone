@@ -4,7 +4,7 @@ import { useAuth } from "../../context/auth/authContext";
 
 function Login({ setNewUser }) {
     const nav = useNavigate();
-    const { Login } = useAuth();
+    const { login } = useAuth();
     const [ formData, setFormData] = useState({
         username: '',
         password: ''
@@ -20,8 +20,8 @@ function Login({ setNewUser }) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        await Login(formData);
-        nav('/dashboard')
+        await login(formData);
+        nav('/dashboard');
     }
 
     // Function to dictate click action
