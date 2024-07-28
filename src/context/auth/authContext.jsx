@@ -13,6 +13,13 @@ export function UserProvider({children}) {
     // Login Function
     const login = async (formData) => {
         try {
+            // Make call to backend
+            let res = await axios({
+                method: 'POST',
+                url: 'http://127.0.0.1:3000/api/users/login',
+                data: formData
+            })
+
 
         } catch (error) {
             console.error(error)
