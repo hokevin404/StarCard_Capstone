@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom';
-import { useAuth } from 'src/context/auth/authContext';
+import { useAuth } from '../../context/auth/authContext';
 
 function ProtectedRoutes() {
     const { cookies } = useAuth();
