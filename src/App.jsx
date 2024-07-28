@@ -20,6 +20,7 @@ function App() {
         {/* Protected Routes */}
         <Route element={<ProtectedRoutes />}>
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/profile' element={<Profile />} />
         </Route>
       </Routes>
 
