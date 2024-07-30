@@ -3,16 +3,19 @@ import './navbar.css';
 
 // import modules
 import { useAuth } from '../../context/auth/authContext';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React from "react";
 
 function NavBar() {
+    const nav = useNavigate();
     const { logout } = useAuth();
     const { isAuth, toggleAuth } = useAuth();
 
     function handleClick() {
         toggleAuth();
         logout();
+        nav('/');
     }
 
     return (
