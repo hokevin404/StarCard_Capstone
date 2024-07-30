@@ -1,3 +1,5 @@
+import './profilebio.css';
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './profilebio.css';
@@ -89,14 +91,14 @@ function ProfileBio({ userId }) {
                         cols="50"
                     />
                     <div>
-                        <button onClick={handleEditToggle}>Save</button>
-                        <button onClick={() => handleEditToggle()}>Cancel</button>
+                        <button className='save' onClick={handleEditToggle}>Save</button>
+                        <button className='cancel' onClick={() => handleEditToggle()}>Cancel</button>
                     </div>
                 </div>
             ) : (
                 <div>
                     <p>{bio}</p>
-                    <button onClick={handleEditToggle}>Edit Bio</button>
+                    <button className='edit' onClick={handleEditToggle}>Edit Bio</button>
                 </div>
             )}
             {error && <p className="error">{error}</p>}
