@@ -22,7 +22,7 @@ function Login({ setNewUser }) {
     async function handleSubmit(e) {
         e.preventDefault();
         await login(formData);
-        nav('/dashboard');
+        nav('/profile');
     }
 
     // Function to dictate click action
