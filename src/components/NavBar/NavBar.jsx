@@ -8,10 +8,17 @@ import { Link } from 'react-router-dom';
 import React from "react";
 
 function NavBar() {
+    // Initialize to navigate to other pages
     const nav = useNavigate();
-    const { logout } = useAuth();
-    const { isAuth, toggleAuth } = useAuth(false);
+    // Destructure logout, isAuth, and toggleAuth from useAuth
+    const { logout, isAuth, toggleAuth } = useAuth(false);
 
+    // Navigate to user profile on click
+    function handleClickToProfile() {
+        nav('/profile');
+    }
+
+    // Navigate to homepage after logging out
     function handleClick() {
         toggleAuth();
         logout();
@@ -27,7 +34,11 @@ function NavBar() {
             </li>
             <li className="spacer"></li>
             {isAuth ? (
-                <li className='logout'><button onClick={handleClick}>Log Out</button></li>
+                <>
+                    <li className='logout'><button onClick={handleClickToProfile}>Profile</button></li>
+                    <li className='logout'><button onClick={handleClick}>Log Out</button></li>
+                </>
+
             ) : (
                 <li className='login'><Link to={'/login'}>Log In</Link></li>
             )}
