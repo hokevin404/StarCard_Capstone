@@ -1,15 +1,20 @@
+import './card.css'
+
 import React from 'react';
 
-function Card() {
+function Card({title, price, url }) {
+
     return (
         <div className="card">
-            <img src="src/assets/200_img_placeholder.png" alt="Avatar" />
-            <div className="container">
-                <p>Dreamcatcher Justice</p>
-                <h3><b>$50.99</b></h3>
+            <div className="cardImage" style={{ backgroundImage: `url(${url})` }}></div>
+            <div className="cardContent">
+                <div className='cardHeader'>
+                    <h2 className="cardTitle">{title}</h2>
+                    <span className="cardPrice">${price}</span>
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Card

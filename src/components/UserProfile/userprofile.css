@@ -1,0 +1,37 @@
+.profile {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profileInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profileInfo img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Optional: makes the image circular */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.profileInfo div {
+    display: flex;
+    flex-direction: column; /* Stacks text elements vertically */
+}
+
+.profileInfo span {
+    margin-bottom: 10px; /* Space between text elements */
+}
+
+.profileInfo p {
+    margin: 0; /* Remove default margin from paragraphs */
+}
+
+.profileBio p {
+    margin: 0; /* Remove default margin from paragraphs */
+    line-height: 1.6; /* Optional: improves readability */
+}

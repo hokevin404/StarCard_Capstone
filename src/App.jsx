@@ -9,13 +9,14 @@ import Dashboard from './components/pages/Dashboard/Dashboard.jsx';
 import Profile from './components/pages/Profile/Profile.jsx';
 
 function App() {
+  const targetURL = 'http://127.0.0.1:3000/api/listings';
 
   return (
     <>
       <NavBar />
       <Routes>
         <Route path='/login' element={<Auth />} />
-        <Route path='/' element={<Shop />} />
+        <Route path='/' element={<Shop targetURL={targetURL}/>} />
 
         {/* Protected Routes */}
         <Route element={<ProtectedRoutes />}>

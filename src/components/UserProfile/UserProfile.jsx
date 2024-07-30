@@ -2,13 +2,16 @@ import './userprofile.css';
 
 import React from 'react'
 
-function UserProfile() {
+function UserProfile({ userid, username}) {
+
     return (
         <div className='profile'>
             <div className='profileInfo'>
                 <img src='src/assets/200_img_placeholder.png' alt='profile image' />
-                <span><p>Username</p></span>
-                <span><p>UserID</p></span>
+                <div>
+                    <span><p>{username}</p></span>
+                    <span><p>{userid}</p></span>
+                </div>
             </div>
             <div className='profileBio'>
                 <p>
