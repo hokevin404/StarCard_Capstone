@@ -8,8 +8,10 @@ import React from "react";
 
 function NavBar() {
     const { logout } = useAuth();
+    const { isAuth, toggleAuth } = useAuth();
 
     function handleClick() {
+        toggleAuth();
         logout();
     }
 
@@ -21,8 +23,11 @@ function NavBar() {
                 </Link>
             </li>
             <li className="spacer"></li>
-            <li className='login'><button onClick={handleClick}>Log Out</button></li>
-            <li className='login'><Link to={'/login'}>Log In</Link></li>
+            {isAuth ? (
+                <li className='logout'><button onClick={handleClick}>Log Out</button></li>
+            ) : (
+                <li className='login'><Link to={'/login'}>Log In</Link></li>
+            )}
         </ul>
     )
 }

@@ -5,7 +5,7 @@ import { useAuth } from "../../context/auth/authContext";
 
 function Login({ setNewUser }) {
     const nav = useNavigate();
-    const { login } = useAuth();
+    const { login, toggleAuth } = useAuth();
     const [ formData, setFormData] = useState({
         username: '',
         password: ''
@@ -22,6 +22,7 @@ function Login({ setNewUser }) {
     async function handleSubmit(e) {
         e.preventDefault();
         await login(formData);
+        toggleAuth();
         nav('/profile');
     }
 

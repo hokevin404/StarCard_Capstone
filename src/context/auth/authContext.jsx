@@ -8,7 +8,7 @@ export function UserProvider({ children }) {
     // Create cookies
     const [cookies, setCookies, removeCookie] = useCookies();
     // Create authorization state
-    const [isAuth, setIsAuth] = useState(false);
+    const [isAuth, setIsAuth] = useState(true);
 
     // toggle auth state
     const toggleAuth = () => setIsAuth(prev => !prev);
@@ -59,7 +59,8 @@ export function UserProvider({ children }) {
         login,
         signUp,
         logout,
-        toggleAuth
+        toggleAuth,
+        isAuth
     }), [cookies, isAuth]);
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

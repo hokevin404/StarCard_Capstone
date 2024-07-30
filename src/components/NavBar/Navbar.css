@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Optional: Adjust padding as needed */
+    padding: 10px 20px;
     list-style-type: none;
-    background-color: #f0f0f0; /* Optional: Background color */
+    background-color: #f0f0f0;
     margin: 0;
   }
 
@@ -22,15 +22,19 @@
   }
   
   .spacer {
-    flex: 1; /* Grow and fill available space */
+    flex: 1;
   }
-  .login a {
-    padding: 8px 16px; /* Optional: Adjust padding for Sign Up button */
-    background-color: #007bff; /* Optional: Button background color */
-    color: #fff; /* Optional: Button text color */
+
+  .login a,
+  .logout button {
+    padding: 8px 16px; 
+    background-color: #007bff; 
+    color: #fff; 
     text-decoration: none;
+    border: none;
+    border-radius: 5px;
   }
   
 .login a:hover {
-    background-color: #0056b3; /* Optional: Hover state background color */
+    background-color: #0056b3;
   }
