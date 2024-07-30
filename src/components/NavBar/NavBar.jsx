@@ -10,7 +10,7 @@ import React from "react";
 function NavBar() {
     const nav = useNavigate();
     const { logout } = useAuth();
-    const { isAuth, toggleAuth } = useAuth();
+    const { isAuth, toggleAuth } = useAuth(false);
 
     function handleClick() {
         toggleAuth();

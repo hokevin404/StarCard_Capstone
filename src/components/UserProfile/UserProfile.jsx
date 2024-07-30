@@ -15,7 +15,7 @@ function UserProfile({ userid, username}) {
                 </div>
             </div>
             <div className='profileBio'>
-                <ProfileBio />
+                <ProfileBio userId={userid}/>
             </div>
         </div>
     )
