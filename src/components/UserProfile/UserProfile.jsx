@@ -1,5 +1,6 @@
 import './userprofile.css';
 
+import ProfileBio from '../ProfileBio/ProfileBio'
 import React from 'react'
 
 function UserProfile({ userid, username}) {
@@ -14,12 +15,7 @@ function UserProfile({ userid, username}) {
                 </div>
             </div>
             <div className='profileBio'>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam esse
-                    omnis necessitatibus. Accusamus sed illum, est laborum fugiat ipsam
-                    eveniet at sapiente dicta blanditiis quisquam, voluptate odit alias
-                    ipsa nisi, iusto ducimus. Distinctio, quidem voluptate.
-                </p>
+                <ProfileBio />
             </div>
         </div>
     )
