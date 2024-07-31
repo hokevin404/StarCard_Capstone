@@ -52,3 +52,12 @@ npm start
 # Backend Repo
 
 https://github.com/hokevin404/StarCard_BE
+
+# Organization
+User Stories : https://docs.google.com/document/d/1LsH8qv3ovfIg1YIKqb9JShFTmI-Z3lyJfteVZp-QWQ8/edit?usp=sharing
+
+Used Trello to organize tasks : https://trello.com/invite/b/669f45386ce63464b72c04b1/ATTI58bbaf564f41002b1f3f0daac7ae68247F42D584/starcard
+
+Wireframe: https://www.figma.com/board/O3lSnbPI7AsKrDLk7fSqCd/StarCard?node-id=0-1&t=X2DTkdBUyshRHcrs-1
+
+
