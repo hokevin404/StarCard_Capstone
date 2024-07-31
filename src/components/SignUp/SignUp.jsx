@@ -31,7 +31,7 @@ function SignUp({setNewUser}) {
         throw "Password does not match"
       else {
         await signUp(formData);
-        nav('/dashboard'); 
+        nav('/profile'); 
       };
     } catch (error) {
       console.error(error);

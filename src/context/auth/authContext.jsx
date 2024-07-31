@@ -8,7 +8,7 @@ export function UserProvider({ children }) {
     // Create cookies
     const [cookies, setCookies, removeCookie] = useCookies();
     // Create authorization state
-    const [isAuth, setIsAuth] = useState(true);
+    const [isAuth, setIsAuth] = useState(false);
 
     // toggle auth state
     const toggleAuth = () => setIsAuth(prev => !prev);
